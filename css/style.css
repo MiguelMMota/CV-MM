@@ -1,0 +1,282 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+} 
+
+/** {
+  border: 1px solid red !important;
+}*/
+/*
+.grid {
+  margin-left: 350px;
+  margin-right: 350px;
+}
+*/
+ul,
+li,
+h1,
+h2,
+h3,
+{
+  padding:5px; /*5%*/
+  margin:0;
+  font-family: 'Oxygen', sans-serif;
+}
+
+.row {
+  display: -webkit-flex;
+  display: flex;
+  padding:50px;
+  padding-top:40px;
+  padding-bottom:0px;
+}
+
+
+.clear-fix {
+  overflow: auto;
+}
+
+h1 {
+ 
+  padding-top:20px;
+  font-weight: 600;
+  font-size: 60px;
+  color :#f2f1ef;
+  /*line-height: 48px;*/
+  /*display: inline;*/
+}
+
+h2 {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 30px;
+  color :#f2f1ef;
+  /*
+  line-height: 29px;
+  padding: 10px;*/
+}
+
+h3 {
+  font-style: normal;
+  font-size: 27px;
+  padding-bottom: 0px;
+  font-weight: 500;
+  color: #c59112;
+  line-height: 22px;
+}
+
+h4 {
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #00242f;
+  line-height: 17px;
+}
+
+h5 {
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  font-style: italic;
+  color: #00242f;
+  line-height: 17px;
+}
+
+.col-md-8
+{
+  padding-right:100px;
+}
+
+#header {
+/*  padding:30px;
+  padding-top:60px;*/
+  background-color:#00242f;
+}
+
+
+#jobs
+{
+  margin: 0px;
+  padding: 0px;
+}
+
+.title-text{
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  font-style: italic;
+  color: #00242f;
+  line-height: 17px;
+  float: left;
+}
+
+.location-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  line-height: 16px;
+  float: right;
+
+}
+.date-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  line-height: 16px;
+  float: left;
+}
+
+.contact-text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  color: #00242f;
+  line-height: 21px;
+  text-align: justify;
+  float: left;
+}
+
+.rightColumn-text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  color: #00242f;
+  line-height: 21px;
+  text-align: justify;
+}
+
+.rightColumn-bar {
+  float: right;
+}
+
+p {
+  font-size: 14px;
+  color: #00242f;
+  line-height: 21px;
+  text-align: justify;
+  padding-top: 20px;
+}
+
+a {
+  color: #1199c3;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+}
+
+.welcome-message {
+  font-style: italic;
+  font-size: 18px;
+  color: #f3f3f3;
+  line-height: 28px;
+}
+
+#skills-h3 {
+  color: #f5ae23;
+  display: none;
+}
+/*
+.gray {
+  background-color: #f3f3f3;
+  padding-bottom: 10px;
+  clear:both;
+}
+*/
+
+.flex-box {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.center-content {
+  padding: 2.5% 5%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  padding: 10px;
+}
+
+span {
+  padding: 5px;
+}
+
+.biopic {
+  float: right;
+  display: none;
+  height:176px;
+  width:173px;
+  padding:0px;
+}
+
+.projectPic {
+  width:100%;
+  height:290px;
+  padding:0px;
+  padding-right:40px;
+  margin-right:120px;
+}
+
+/* Media queries to handle various device widths */
+
+@media only screen and (max-width: 2048px) {
+  .grid{
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+}
+
+@media only screen and (max-width:900px) {
+  .biopic {
+    width: 175px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #lets-connect {
+    margin-top: 10%;
+  }
+  .biopic {
+    width: 150px;
+  }
+  .welcome-message {
+    display: none;
+  }
+
+}
+
+#map {
+  display: block;
+  height: 100%;
+  margin: 0 5%;
+}
+
+#mapDiv {
+  height: 400px;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+@media only screen and (min-width: 750px) {
+  #skills-h3,
+  .biopic {
+    display: block;
+  }
+}
+
+.col-md-3,
+.col-md-4 {
+  padding:0px;
+}
