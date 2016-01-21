@@ -31,7 +31,7 @@
             <h3>GET IN TOUCH WITH ME</h3>
           </div>
         </div>
-        <div class = "row">
+        <div class = "row" style="padding-top:0px;">
           <div class = "col-md-8" id = "workExperience">
             <h3>EXPERIENCE</h3>
           </div>
@@ -58,9 +58,6 @@
         <div class = "row" style="padding-top:0px">
           <div class = "col-md-8" id = "education">
             <h3>EDUCATION</h3>
-          <!--  <div class = "row" id = "courses">
-              <div class = "col-md-5" id = course date 
-            </div> -->
           </div>
           <div class = "col-md-4" id = "interests">
             <div class = "row" style = "padding-top:0px;padding-left:15px;padding-right:15px">
@@ -83,55 +80,37 @@
         <div class = "row" style = "padding-top:0px">
           <div class = "col-md-4" id = "project1">
             <!-- Add modal! -->
-            <h3>Project 1</h3>
+            <h6>Project 1</h6>
           </div>
           <div class = "col-md-4" id = "project2">
-            <h3>Project 2</h3>
+            <h6>Project 2</h6>
           </div>
           <div class = "col-md-4" id = "project3">
-            <h3>Project 3</h3>
+            <h6>Project 3</h6>
+          </div>
+        </div>
+        <div class = "row" style = "padding-top:0px">
+          <div class = "col-md-12" id = "mapDiv">
+            <h3>Where I've Lived and Worked</h3>
           </div>
         </div>
       </div>
     </div>
 
-
-
-<!--
-            <div id="lets-connect" class="dark-gray">
-              <h2 class="orange center-text">Let's Connect</h2>
-                <ul id="footerContacts" class="flex-box">
-              </ul>
-            </div>
--->
-
-     <script src="js/resumeBuilder.js"></script>
-   <!-- <script type="text/javascript">
-        if(document.getElementsByClassName('flex-item').length === 0) {
-          document.getElementById('topContacts').style.display = 'none';
+    <script src="js/resumeBuilder.js"></script>
+    <script type="text/javascript">
+        if(document.getElementsByClassName('contact-item').length === 0) {
+          document.getElementById('contacts').style.display = 'none';
         }
         if(document.getElementsByTagName('h1').length === 0) {
           document.getElementById('header').style.display = 'none';
-        }
-        if(document.getElementsByClassName('work-entry').length === 0) {
-          document.getElementById('workExperience').style.display = 'none';
-        }
-        if(document.getElementsByClassName('project-entry').length === 0) {
-          document.getElementById('projects').style.display = 'none';
-        }
-        if(document.getElementsByClassName('education-entry').length === 0) {
-          document.getElementById('education').style.display = 'none';
-        }
-        if(document.getElementsByClassName('flex-item').length === 0) {
-          document.getElementById('lets-connect').style.display = 'none';
-        }
+
         if(document.getElementById('map') === null) {
           document.getElementById('mapDiv').style.display = 'none';
         }
-      </script> 
-    -->
+    </script> 
 
-    <!-- Modal -->
+    <!-- Modal 
     <div class="modal fade" id="project0" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -147,6 +126,6 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
   </body>
 </html>

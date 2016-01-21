@@ -60,10 +60,12 @@ h2 {
 h3 {
   font-style: normal;
   font-size: 27px;
-  padding-bottom: 0px;
+  padding-bottom: 8px;
   font-weight: 500;
   color: #c59112;
   line-height: 22px;
+  border-bottom-style: solid;
+  border-bottom-color: #c59112;
 }
 
 h4 {
@@ -83,6 +85,15 @@ h5 {
   line-height: 17px;
 }
 
+h6 {
+  font-style: normal;
+  font-size: 27px;
+  padding-bottom: 0px;
+  font-weight: 500;
+  color: #c59112;
+  line-height: 22px;
+}
+
 .col-md-8
 {
   padding-right:100px;
@@ -93,6 +104,9 @@ h5 {
   padding-top:60px;*/
   padding-bottom: 50px;
   background-color:#00242f;
+  border-bottom-style: solid;
+  border-bottom-color: #c59112;
+  border-bottom-width: 5px;
 }
 
 
@@ -244,6 +258,21 @@ span {
   padding-right:100px;
   padding-top:0px;
   border:0px;
+  background-image: url("../images/verticalBarWork.png");
+  background-repeat: no-repeat;
+  background-position: 28% 70px;
+}
+
+#education {
+  background-image: url("../images/verticalBarWork.png");
+  background-repeat: no-repeat;
+  background-position: 28% 70px;
+}
+
+#achievements {
+  background-image: url("../images/verticalBarWork.png");
+  background-repeat: no-repeat;
+  background-position: 20% 70px; 
 }
 
 #technicalSkills,
@@ -262,16 +291,17 @@ span {
   z-index:1;
   left:35px;
   top:25px;
+  border-radius:10px;
 }
 
 .blueBar {
   height: 15px;
-  /*width: 75px;*/
   background-color: #00242f;
   position:absolute;
   left:35px;
   top:25px;
   z-index:2;
+  border-radius:10px;
 }
 
 /* Media queries to handle various device widths */

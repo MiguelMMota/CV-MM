@@ -1,12 +1,10 @@
 /*
 TODO:
-1) Barras horizontais/verticais amarelas
-2) Links dos meus empregadores a funcionar
-3) Alinhamento das datas com o respetivo emprego
-4) URL da FEUP a funcionar
-5) Education.subject a aparecer na página
-6) Queries to handle divice width
-7) Links - empregos, cursos, interesses
+1) Alinhamento das datas com o respetivo emprego
+2) Queries to handle divice width
+3) Links - empregos, cursos, interesses
+4) Modals
+5) Map
 */
 
 var bio = {
@@ -14,15 +12,15 @@ var bio = {
     "role": "Front-End Developer",
     "pictureURL": "images/me.png",
     "aboutMe": "I'm a front-end developer, looking to embrace a great opportunity. I accumulate my university studies in Electrical and Computer Engineering with my own personal research or online courses on front-end development tools. I've had many fulfilling experiences while living and working in several countries accross Europe. Recently settled in the United Kingdom, I'm looking to apply my skills in an exciting project",
-    "contacts": {
+    "contacts": [{
         "address": "7, Wherstead Road, IP2 8JQ, Suffolk, UK",
         "mobile": "(+44) 79136 37670",
         "emailAddress": "mota.m.miguel@gmail.com",
         "gitHub": "none",
         "twitter": "none",
         "linkedIn": "none",
-        "location": "Ipswich"
-    },
+        "location": "Ipswich, United Kingdom"
+    }],
     "interests": [{
     	"description": "Music", //(piano, guitar, composing)
     	"image": "images/music.png"
@@ -68,8 +66,7 @@ var achievements = {
 		"date": "2002-2008"
 	}, {
 		"description": "Several achievements in math competitions",
-		"date": "2002-2005",
-		"expandedDescription": "'Jogo do 24' school winner (2002), School Math Olympiads winner(2003), Regional Math Olympiads winner (2004), School “Equamat” winner (2005)"
+		"date": "2002-2005"
 	}]
 }
 
@@ -495,11 +492,6 @@ achievements.display = function () {
 			$(achievementTextID).append(formattedAchievementDescription);
 			formattedAchievementDate = HTMLachievementDates.replace ("%data%", achievements.achievements[achievement].date);
 			$(achievementDateID).append(formattedAchievementDate);
-			/*
-			if (achievements.achievements[achievement].expandedDesription) {
-				modal it up x)
-			}
-			*/
 		}
 	}
 }
@@ -550,6 +542,8 @@ bio.displayInterests = function () {
 	}
 }
 
+$("#madDiv").append(googleMap);
+
 work.display ();
 education.display();
 projects.display();
@@ -558,4 +552,4 @@ skills.displayPersonal();
 skills.displayLanguage();
 achievements.display();
 bio.displayInterests();
-//$("#madDiv").append(googleMap);
+
