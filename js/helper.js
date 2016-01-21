@@ -1,9 +1,8 @@
 
 //Name and Role
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<h2>%data%</h2>'; // what does <hr> really do? ---> faz uma linha
-var HTMLbioPic = '<img src = "%data%" alt = "Photo" class="biopic">' //como configurar o elemento em css e não aqui? #photo?
-//var HTMLbioPic = '<img src="%data%" class="biopic">';
+var HTMLheaderRole = '<h2>%data%</h2>';
+var HTMLbioPic = '<img src = "%data%" alt = "Photo" class="biopic">';
 
 //About me
 var HTMLaboutMe = '<p>%data%</p>';
@@ -22,41 +21,64 @@ var HTMLmobile2 = '<li class="flex-item"><span class="orange-text">mobile</span>
 var HTMLemailAddress2 = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
 
 //Experience
+var HTMLworkStart = '<div class = "row" id = "job%data%" style="padding:0px;padding-left:15px"><div class = "col-md-5" id = "job%data%date"></div><div class = "col-md-7" id = "job%data%text"></div></div>';
 var HTMLworkEmployer = '<h4>%data%</h4><a href="#"></a>';
 var HTMLworkTitle = '<div class="title-text">%data%</div>';
-var HTMLworkDates = '<p style="font-style:italic">%data%</p>';
+var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p><br>';
 //var HTMLworkDescription2 = '<p>%data%</p>';
-
-//Skills - Technical, Personal, and Language
-var HTMLskill = '<p class="rightColumn-text">%data%</p>';
-var HTMLskillLevel = '<p class=rightColumn-bar> %data% NAO SEI COMO FAZER ESTA BARRA</p><br>';
-//var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
+//font-style:italic;padding-top:0px;margin-top:10px
 
 //Education
+var HTMLeducationStart = '<div class = "row" id = "school%data%" style="padding:0px;padding-left:15px"><div class = "col-md-5" id = "school%data%date"></div><div class = "col-md-7" id = "school%data%text"></div></div>';
 var HTMLeducationSchool = '<h4>%data%</h4>';
 //var HTMLeducationURL = '<a href="%URL%"></a>';
-var HTMLeducationSubject = '<p style="font-style:italic">%data%</p>';
+//var HTMLeducationSubject = '<p style="font-style:italic">%data%</p>';
+var HTMLeducationSubject = '<div class="title-text" style = "float:none;">%data%</div>'
 //var HTMLeducationSubject = '<div class="title-text">%data%</div>';
 var HTMLeducationLocation = '<div class="location-text">%data%</div>';
-var HTMLeducationDates = '<p style="font-style:italic">%data%</p>';
-var HTMLeducationDescription = '<p style="float:left"><br>%data%</p><br>';
-var HTMLeducationLevel = '<p style="text-decoration: underline;float:right"><br>Grade: %data%</p>';
+var HTMLeducationDates = '<div class="date-text">%data%</p>';
+var HTMLeducationDescription = '<p style="float:left;padding-top:20px;margin-bottom:25px">%data%</p><br>';
+var HTMLeducationLevel = '<p style="text-decoration: underline;float:right;padding-top:0px;margin-bottom:0px;">Grade: %data%</p>';
+
+var HTMLeducationOnlineCourses = '<div class = "col-md-12" style = "padding:0px;"id="courses"><h3 style = "line-height=20px;font-size:20px;font-weight=500px;">ONLINE COURSES</h3></div></div>';
+var HTMLeducationCourseStart = '<div class = "row" id = "course%data%" style="padding:0px;padding-left:15px"><div class = "col-md-5" id = "course%data%date"></div><div class = "col-md-7" id = "course%data%text"></div></div>';
 
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
 var HTMLonlineTitle = '<a href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
-var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
 //Projects
 var HTMLprojectTitle = '<h4>%data%</h4>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src = "%data%" '
+var HTMLprojectImage = '<img src = "%data%" ';
+var HTMLprojectImageNumber = 'alt = "Project %number% image" class = "projectPic" data-toggle="modal" data-target="#project%number%">';
 
-var HTMLprojectImageNumber = 'alt = "Project %number% image" class = "projectPic">';
+//Modals
+var HTMLmodalTitle = '<h4 class="modal-title" id="myModalLabel">%data%</h4>';
+var HTMLmodalImage = '<img class="projectPic" src="%data%" alt="Project Image" >';
+
+//Skills - Technical, Personal, and Language
+var HTMLtechnicalSkillStart = '<div class = "row" id = "technicalSkill%data%" style="padding:0px;padding-left:15px"><div class = "col-md-5" id = "technicalSkill%data%text"></div><div class = "col-md-7" id = "technicalSkill%data%level"></div></div>';
+var HTMLpersonalSkillStart = '<div class = "row" id = "personalSkill%data%" style="padding:0px;padding-left:15px"><div class = "col-md-5" id = "personalSkill%data%text"></div><div class = "col-md-7" id = "personalSkill%data%level"></div></div>';
+var HTMLlanguageSkillStart = '<div class = "row" id = "languageSkill%data%" style="padding:0px;padding-left:15px"><div class = "col-md-5" id = "languageSkill%data%text"></div><div class = "col-md-7" id = "languageSkill%data%level"></div></div>';
+var HTMLskill = '<p class="rightColumn-text">%data%</p>';
+var HTMLskillLevel = '<p class=rightColumn-bar> %data% NAO SEI COMO FAZER ESTA BARRA</p><br>';
+var HTMLskillBlueBar = '<div class="blueBar" style = "width:%data%px;"></div>';
+var HTMLskillGreyBar = '<div class="whiteBar"></div>';
+//var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
+
+//Achievements
+var HTMLachievementStart = '<div class = "row" id = "achievement%data%" style="padding:0px;padding-left:15px"><div class = "col-md-3" id = "achievement%data%date"></div><div class = "col-md-9" id = "achievement%data%text"></div></div>';
+var HTMLachievementDescription = '<p style="float:left;margin-top:10px;padding-top:0px;margin-bottom:15px">%data%</p><br>';
+var HTMLachievementDates = '<div class="date-text">%data%</div>';
+
+var HTMLinterestStartRow = '<div class = "row" id = "interestRow%data%" style="padding:0px;padding-left:15px"><div class = "col-md-3" id = "interest%data%-0"></div><div class = "col-md-3" id = "interest%data%-1"></div><div class = "col-md-3" id = "interest%data%-2"></div><div class = "col-md-3" id = "interest%data%-3"></div></div>';
+var HTMLinterestDescription = '<div style="text-align:center;margin-top:10px;padding-top:0px;margin-bottom:10px;color:#00242f;">%data%</div><br>';
+var HTMLinterestImage = '<img class="blockImage" src="%data%" alt="Image">';
 
 //Where I've been
 var googleMap = '<div id="map"></div>';
@@ -64,8 +86,6 @@ var googleMap = '<div id="map"></div>';
 //Awards & Achievements
 
 //What I like to do
-
-
 /*
 The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
 */

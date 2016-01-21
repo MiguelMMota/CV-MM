@@ -34,34 +34,45 @@
         <div class = "row">
           <div class = "col-md-8" id = "workExperience">
             <h3>EXPERIENCE</h3>
-            <div class = "row" style="padding-left:10px">
-              <div class = "col-md-5" id = "dates"></div>
-              <div class = "col-md-7" id = "jobs"></div>
-            </div>
           </div>
           <div class = "col-md-4">
             <div class = "row" style = "padding-top:0px;padding-left:15px;padding-right:15px">
-              <div class = "col-md-12" style = "padding:0px;" id = "technicalSkills">
-                <h3>TECHNICAL SKILLS</h3>
+              <div class = "col-md-12" style = "padding:0px;" id = "technicalSkills" style = "background-color:#00242f">
+                <h3 style = "padding-bottom:8px;">TECHNICAL SKILLS</h3>
+                <!--  <div class="blueBar"></div>
+                  <div class="whiteBar"></div> -->
               </div>
             </div>
             <div class = "row" style = "padding-top:0px;padding-left:15px;padding-right:15px">
               <div class = "col-md-12" style = "padding:0px;" id = "personalSkills">
-                <h3>PERSONAL SKILLS</h3>
+                <h3 style = "padding-bottom:8px;">PERSONAL SKILLS</h3>
+              </div>
+            </div>
+            <div class = "row" style = "padding-top:0px;padding-left:15px;padding-right:15px">
+              <div class = "col-md-12" style = "padding:0px;" id = "languageSkills">
+                <h3 style = "padding-bottom:8px;">LANGUAGE SKILLS</h3>
               </div>
             </div>
           </div>
         </div>
-        <div class = "row">
+        <div class = "row" style="padding-top:0px">
           <div class = "col-md-8" id = "education">
             <h3>EDUCATION</h3>
-            <div class = "row" style="padding-left:10px">
-              <div class = "col-md-5" id = "datesSchool"></div>
-              <div class = "col-md-7" id = "courses"></div>
-            </div>
+          <!--  <div class = "row" id = "courses">
+              <div class = "col-md-5" id = course date 
+            </div> -->
           </div>
-          <div class = "col-md-4" id = "languageSkills">
-            <h3>LANGUAGE SKILLS</h3>
+          <div class = "col-md-4" id = "interests">
+            <div class = "row" style = "padding-top:0px;padding-left:15px;padding-right:15px">
+              <div class = "col-md-12" style = "padding:0px;" id = "achievements" style = "background-color:#00242f">
+                <h3 style = "padding-bottom:8px;">AWARDS & ACHIEVEMENTS</h3>
+              </div>
+            </div>
+            <div class = "row" style = "padding-top:0px;padding-left:15px;padding-right:15px">
+              <div class = "col-md-12" style = "padding:0px;" id = "interests">
+                <h3 style = "padding-bottom:8px;margin-top:75px">MY INTERESTS</h3>
+              </div>
+            </div>
           </div>
         </div>
         <div class = "row">
@@ -70,14 +81,14 @@
           </div>
         </div>
         <div class = "row" style = "padding-top:0px">
-          <div class = "col-md-4" id = "project0">
+          <div class = "col-md-4" id = "project1">
             <!-- Add modal! -->
             <h3>Project 1</h3>
           </div>
-          <div class = "col-md-4" id = "project1">
+          <div class = "col-md-4" id = "project2">
             <h3>Project 2</h3>
           </div>
-          <div class = "col-md-4" id = "project2">
+          <div class = "col-md-4" id = "project3">
             <h3>Project 3</h3>
           </div>
         </div>
@@ -119,5 +130,23 @@
         }
       </script> 
     -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="project0" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Favorite App Page</h4>
+          </div>
+          <div class="modal-body">
+            <img class="projectPic" src="images/auction.jpg">
+            This was my first project in this class. I learned a lot about HTML and CSS.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
