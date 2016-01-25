@@ -3,14 +3,13 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Resume Miguel Mota</title> <!-- Como criar dinamicamente em JS?-->
+    <title>Resume Miguel Mota</title>
 
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link href="css/style.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
-    
-    <script src="js/bootstrap.min.js"></script>
     <script src="js/jQuery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/helper.js"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
@@ -98,13 +97,14 @@
     </div>
 
     <script src="js/resumeBuilder.js"></script>
+
     <script type="text/javascript">
-        if(document.getElementsByClassName('contact-item').length === 0) {
+        if(document.getElementsByClassName('contact-text').length === 0) {
           document.getElementById('contacts').style.display = 'none';
         }
         if(document.getElementsByTagName('h1').length === 0) {
           document.getElementById('header').style.display = 'none';
-
+        }
         if(document.getElementById('map') === null) {
           document.getElementById('mapDiv').style.display = 'none';
         }

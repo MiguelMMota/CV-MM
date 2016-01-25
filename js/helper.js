@@ -27,8 +27,6 @@ var HTMLworkTitle = '<div class="title-text">%data%</div>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p><br>';
-//var HTMLworkDescription2 = '<p>%data%</p>';
-//font-style:italic;padding-top:0px;margin-top:10px
 
 //Education
 var HTMLeducationStart = '<div class = "row" id = "school%data%" style="padding:0px;padding-left:15px"><div class = "col-md-5" id = "school%data%date"></div><div class = "col-md-7" id = "school%data%text"></div></div>';
@@ -53,7 +51,7 @@ var HTMLonlineURL = '<br><a href="#">%data%</a>';
 //Projects
 var HTMLprojectTitle = '<h4>%data%</h4>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
+var HTMLprojectDescription = '<p style="padding-right:30px"><br>%data%</p>';
 var HTMLprojectImage = '<img src = "%data%" ';
 var HTMLprojectImageNumber = 'alt = "Project %number% image" class = "projectPic" data-toggle="modal" data-target="#project%number%">';
 

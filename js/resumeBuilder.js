@@ -218,13 +218,13 @@ $("#photo").append(biopic); // funciona?
 var formattedAboutMe = HTMLaboutMe.replace ("%data%", bio.aboutMe);
 $("#about").append(formattedAboutMe); // funciona?
 
-var formattedAddress = HTMLaddress.replace ("%data%", bio.contacts.address);
+var formattedAddress = HTMLaddress.replace ("%data%", bio.contacts[0].address);
 var addressLine = HTMLaddressText + formattedAddress;
 
-var formattedEmailAddress = HTMLaddress.replace ("%data%", bio.contacts.emailAddress);
+var formattedEmailAddress = HTMLaddress.replace ("%data%", bio.contacts[0].emailAddress);
 var emailAddressLine = HTMLemailAddressText + formattedEmailAddress;
 
-var formattedMobile = HTMLmobile.replace ("%data%",bio.contacts.mobile);
+var formattedMobile = HTMLmobile.replace ("%data%",bio.contacts[0].mobile);
 var mobileLine = HTMLmobileText + formattedMobile;
 
 $("#contacts").append(addressLine);
@@ -368,21 +368,15 @@ projects.display = function () {
 			projectNumberInt++;
 
 			printID = "#project" + projectNumberInt + ":last";
-			//$("#projects:last").append(printID);
-
+			
 			projectNumberInt = parseInt(project);
 			projectNumberInt++;
-
-			//$(printID).append(projectNumberInt);
-			//$(printID).append(projectNumberInt.toString());
 			projectNumberString = projectNumberInt.toString();
 			
 			formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[0]);
 			formattedImageNumber = formattedImage + HTMLprojectImageNumber.replace(/%number%/g, projectNumberString);
 			$(printID).append(formattedImageNumber);
 
-			//<img src = "images/placekitten.jpg" alt = "Project 1 image">
-		
 			formattedTitle = HTMLprojectTitle.replace ("%data%", projects.projects[project].title);
 			$(printID).append(formattedTitle);
 			
@@ -390,6 +384,7 @@ projects.display = function () {
 			$(printID).append(formattedDates);
 
 			formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+			$(printID).append(formattedDescription);			
 /*
 			modalTitle = HTMLmodalTitle.replace("%data%", projects.projects[project].title);
 			$(".modal-header").append(modalTitle);
