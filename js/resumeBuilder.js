@@ -108,7 +108,7 @@ var projects = {
 	"projects" : [{
 		"title" : "1, 2, 3... Sold!",
 		"dates" : "Feb 2014 - Jul 2014",
-		"description" : "An auction platform, with many of the funcionalities of other tools such as ebay, amazon. Project developed as part of an optional university class on Database and Web Appications, focusing on database management, server communication, and front-end development. Worked with HTML, CSS, Javascript, JQuery, Bootstrap, JSON, SQL",
+		"description" : "An auction platform, with many of the funcionalities of other tools such as ebay, amazon. Project developed as part of an optional university class on Database and Web Appications, focusing on database management, server communication, and front-end development. The whole project involved HTML, CSS, Javascript, JQuery, Bootstrap, JSON, SQL, but my responsibilities were revolved mostly around database management",
 		"images" : ["images/auction.jpg"]
 	},
 	{
@@ -362,6 +362,11 @@ projects.display = function () {
 
 		var modalTitle;
 		var modalImage;
+		var modalDescription;
+		var modalPrintID;
+
+
+		$("#projects:last").append(HTMLprojectMessage);
 
 		for (project in projects.projects) {
 			projectNumberInt = parseInt(project);
@@ -384,14 +389,18 @@ projects.display = function () {
 			$(printID).append(formattedDates);
 
 			formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-			$(printID).append(formattedDescription);			
-/*
-			modalTitle = HTMLmodalTitle.replace("%data%", projects.projects[project].title);
-			$(".modal-header").append(modalTitle);
+//			$(printID).append(formattedDescription);			
 
-			modalImage = HTMLmodalimage.replace ("%data%", projects.projects[project].images[0]);
-			$(".modal-body").append(modalImage);
-			$(".modal-body").append(formattedDescription);*/
+			modalPrintID = "modalHeader" + projectNumberInt + ":last";
+
+			modalTitle = HTMLmodalTitle.replace("%data%", projects.projects[project].title);
+			$(modalPrintID).append(modalTitle);
+			$(printID).append(modalPrintID);
+
+	//		modalImage = HTMLmodalImage.replace ("%data%", projects.projects[project].images[0]);
+		//	modalDescription = HTMLmodalDescription.replace("%data%", projects.projects[project].description);
+	//		$("#modalBody1:last").append(modalImage);
+		//	$("#modalBody1:last").append(modalDescription);
 		}
 	}
 }
@@ -519,15 +528,9 @@ bio.displayInterests = function () {
 				$(interestID).append(formattedInterestImage);
 			}
 
-
 			formattedInterestDescription = HTMLinterestDescription.replace("%data%", bio.interests[interest].description);
 			$(interestID).append(formattedInterestDescription);
-			
-			/*
-			if (bio.interests[interest].expandedDesription) {
-				modal it up x)
-			}
-			*/
+
 			column++;
 			if (column === 4) {
 				column = 0;

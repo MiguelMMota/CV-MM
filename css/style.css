@@ -332,6 +332,7 @@ span {
   .welcome-message {
     display: none;
   }
+  .background-image:none;
 }
 
 #map {

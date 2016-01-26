@@ -49,25 +49,26 @@ var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
 //Projects
+
+var HTMLprojectMessage = '<p class="date-text">Click the pictures for further information</p>'
 var HTMLprojectTitle = '<h4>%data%</h4>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p style="padding-right:30px"><br>%data%</p>';
 var HTMLprojectImage = '<img src = "%data%" ';
-var HTMLprojectImageNumber = 'alt = "Project %number% image" class = "projectPic" data-toggle="modal" data-target="#project%number%">';
+var HTMLprojectImageNumber = 'alt = "Project %number% image" class = "projectPic" data-toggle="modal" data-target="#modalProject%number%">';
 
 //Modals
-var HTMLmodalTitle = '<h4 class="modal-title" id="myModalLabel">%data%</h4>';
+var HTMLmodalTitle = '<h4 class="modal-title" id="myModalLabel1">%data%</h4>';
 var HTMLmodalImage = '<img class="projectPic" src="%data%" alt="Project Image" >';
+var HTMLmodalDescription = '<p><br>%data%</p>';// style="padding-right:30px"
 
 //Skills - Technical, Personal, and Language
 var HTMLtechnicalSkillStart = '<div class = "row" id = "technicalSkill%data%" style="padding:0px;padding-left:15px"><div class = "col-md-5" id = "technicalSkill%data%text"></div><div class = "col-md-7" id = "technicalSkill%data%level"></div></div>';
 var HTMLpersonalSkillStart = '<div class = "row" id = "personalSkill%data%" style="padding:0px;padding-left:15px"><div class = "col-md-5" id = "personalSkill%data%text"></div><div class = "col-md-7" id = "personalSkill%data%level"></div></div>';
 var HTMLlanguageSkillStart = '<div class = "row" id = "languageSkill%data%" style="padding:0px;padding-left:15px"><div class = "col-md-5" id = "languageSkill%data%text"></div><div class = "col-md-7" id = "languageSkill%data%level"></div></div>';
 var HTMLskill = '<p class="rightColumn-text">%data%</p>';
-var HTMLskillLevel = '<p class=rightColumn-bar> %data% NAO SEI COMO FAZER ESTA BARRA</p><br>';
 var HTMLskillBlueBar = '<div class="blueBar" style = "width:%data%px;"></div>';
 var HTMLskillGreyBar = '<div class="whiteBar"></div>';
-//var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 //Achievements
 var HTMLachievementStart = '<div class = "row" id = "achievement%data%" style="padding:0px;padding-left:15px"><div class = "col-md-3" id = "achievement%data%date"></div><div class = "col-md-9" id = "achievement%data%text"></div></div>';
