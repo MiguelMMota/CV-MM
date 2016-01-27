@@ -9,22 +9,22 @@ var HTMLaboutMe = '<p>%data%</p>';
 
 //Get in touch with me
 var HTMLaddressText = '<p class="contact-text">Address:&nbsp</p>';
-var HTMLaddress = '<p>%data%</p><br>';
+var HTMLaddress = '<p>%data%</p>';
 
 var HTMLemailAddressText = '<p class="contact-text">Email:&nbsp</p>';
-var HTMLemailAddress = '<p>%data%</p><br>';
+var HTMLemailAddress = '<p>%data%</p>';
+
+var HTMLtelephoneText = '<p class="contact-text">Telephone:&nbsp</p>';
+var HTMLtelephone = '<p>%data%</p>';
 
 var HTMLmobileText = '<p class="contact-text">Mobile:&nbsp</p>';
-var HTMLmobile = '<p>%data%</p><br>';
-
-var HTMLmobile2 = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemailAddress2 = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
+var HTMLmobile = '<p>%data%</p>';
 
 //Experience
 var HTMLworkStart = '<div class = "row" id = "job%data%" style="padding:0px;padding-left:15px"><div class = "col-md-5" id = "job%data%date"></div><div class = "col-md-7" id = "job%data%text"></div></div>';
 var HTMLworkEmployer = '<h4>%data%</h4><a href="#"></a>';
 var HTMLworkTitle = '<div class="title-text">%data%</div>';
-var HTMLworkDates = '<div class="date-text">%data%</div>';
+var HTMLworkDates = '<div class="date-text">%data%</p>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p><br>';
 
@@ -37,8 +37,9 @@ var HTMLeducationSubject = '<div class="title-text" style = "float:none;">%data%
 //var HTMLeducationSubject = '<div class="title-text">%data%</div>';
 var HTMLeducationLocation = '<div class="location-text">%data%</div>';
 var HTMLeducationDates = '<div class="date-text">%data%</p>';
-var HTMLeducationDescription = '<p style="float:left;padding-top:20px;margin-bottom:25px">%data%</p><br>';
-var HTMLeducationLevel = '<p style="text-decoration: underline;float:right;padding-top:0px;margin-bottom:0px;">Grade: %data%</p>';
+var HTMLeducationDescription = '<p style="float:left;padding-top:20px;margin-bottom:0px">%data%</p>';
+var HTMLeducationLevel = '<p style="text-decoration: underline;text-align:right;padding-top:0px;margin-bottom:0px;">Grade: %data%</p>';
+var HTMLeducationHaltReason = '<div class="italic-text"><br>%data%</div>';
 
 var HTMLeducationOnlineCourses = '<div class = "col-md-12" style = "padding:0px;"id="courses"><h6 style = "line-height=20px;font-size:20px;font-weight=500px;">ONLINE COURSES</h6></div></div>';
 var HTMLeducationCourseStart = '<div class = "row" id = "course%data%" style="padding:0px;padding-left:15px"><div class = "col-md-5" id = "course%data%date"></div><div class = "col-md-7" id = "course%data%text"></div></div>';

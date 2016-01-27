@@ -52,9 +52,6 @@ h2 {
   font-weight: 400;
   font-size: 30px;
   color :#f2f1ef;
-  /*
-  line-height: 29px;
-  padding: 10px;*/
 }
 
 h3 {
@@ -173,7 +170,7 @@ p {
   color: #00242f;
   line-height: 21px;
   text-align: justify;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 a {
@@ -250,6 +247,14 @@ span {
   padding:0px;
   padding-right:40px;
   margin-right:120px;
+}
+
+.italic-text {
+  font-size: 14px;
+  font-style: oblique;
+  color: #00242f;
+  line-height: 21px;
+  text-align: justify;
 }
 
 #workExperience {

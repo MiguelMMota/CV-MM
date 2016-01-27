@@ -9,10 +9,10 @@ TODO:
 
 var bio = {
     "name": "Miguel M. Mota",
-    "role": "Front-End Developer",
+    "role": "Junior Software Developer",
     "pictureURL": "images/me.png",
     "aboutMe": "I'm a front-end developer, looking to embrace a great opportunity. I accumulate my university studies in Electrical and Computer Engineering with my own personal research or online courses on front-end development tools. I've had many fulfilling experiences while living and working in several countries accross Europe. Recently settled in the United Kingdom, I'm looking to apply my skills in an exciting project",
-    "contacts": [{
+    "contacts": {
         "address": "7, Wherstead Road, IP2 8JQ, Suffolk, UK",
         "mobile": "(+44) 79136 37670",
         "emailAddress": "mota.m.miguel@gmail.com",
@@ -20,9 +20,9 @@ var bio = {
         "twitter": "none",
         "linkedIn": "none",
         "location": "Ipswich, United Kingdom"
-    }],
+    },
     "interests": [{
-    	"description": "Music", //(piano, guitar, composing)
+    	"description": "Music",
     	"image": "images/music.png"
     }, {
     	"description": "Football", 
@@ -130,10 +130,11 @@ var education = {
 		"name": "FEUP - Faculdade de Engenharia da Universidade do Porto",
 		"location": "Porto, Portugal",
 		"subject": "Electronic and Computer Engineering",
-		"dates": "2008-Present",
+		"dates": "2010-2014",
 		"schoolURL": "www.fe.up.pt",
-		"level": "17.0/20",
-		"description": "Masters Program with heavy emphasis on programming and computer engineering. Initiated major in Telecommunications. Achieved top results, including in classes based on C, Java, SQL, HTML, CSS, Javascript, Grafcet, Verilog, and other programming languages"
+		"level": "17.0/20 - First Class",
+		"description": "Masters Program with heavy emphasis on programming and computer engineering. Initiated major in Telecommunications. Achieved top results, including in classes based on C, Java, SQL, HTML, CSS, Javascript, Grafcet, Verilog, and other programming languages",
+		"haltReason": "Due to funding issues I have taken a study break from 2014-Present to get married and relocate to the UK. I will be completing my final exams in Summer 2016"
 	}],
 	"onlineCourses": [{
 		"title": "JavaScript Crash Course",
@@ -154,6 +155,18 @@ var education = {
 		"url": "https://www.udacity.com/course/viewer#!/c-ud015",
 		"description": "Intermediate level Javascript course, with focus on object-oriented Javascript, leading to the study of different class patterns, such as pseduclassical subclasses"
 	}]
+}
+
+var agency = {
+	"agency": {
+		"name": "Bristow Holland",
+		"director": "Andy Bristow",
+        "address": "Basepoint, 70-72 The Havens, Ipwich IP3 9BF",
+        "telephone": "(+44) 1473 722944",
+        "mobile": "(+44) 7919008543",
+        "emailAddress": "andy@bristowholland.com",
+        "location": "Ipswich, United Kingdom"
+	}
 }
 
 //Grafcet, ST - 160; Matlab - 140, Level out of 200
@@ -218,17 +231,21 @@ $("#photo").append(biopic); // funciona?
 var formattedAboutMe = HTMLaboutMe.replace ("%data%", bio.aboutMe);
 $("#about").append(formattedAboutMe); // funciona?
 
-var formattedAddress = HTMLaddress.replace ("%data%", bio.contacts[0].address);
+var formattedAddress = HTMLaddress.replace ("%data%", agency.agency.address);
 var addressLine = HTMLaddressText + formattedAddress;
 
-var formattedEmailAddress = HTMLaddress.replace ("%data%", bio.contacts[0].emailAddress);
+var formattedEmailAddress = HTMLaddress.replace ("%data%", agency.agency.emailAddress);
 var emailAddressLine = HTMLemailAddressText + formattedEmailAddress;
 
-var formattedMobile = HTMLmobile.replace ("%data%",bio.contacts[0].mobile);
+var formattedMobile = HTMLmobile.replace ("%data%",agency.agency.mobile);
 var mobileLine = HTMLmobileText + formattedMobile;
+
+var formattedTelephone = HTMLtelephone.replace ("%data%",agency.agency.telephone);
+var telephoneLine = HTMLtelephoneText + formattedTelephone;
 
 $("#contacts").append(addressLine);
 $("#contacts").append(emailAddressLine);
+$("#contacts").append(telephoneLine);
 $("#contacts").append(mobileLine);
 
 //Experience
@@ -279,6 +296,7 @@ education.display = function () {
 		var formattedDates;
 		var formattedLevel;
 		var formattedDescription;
+		var formattedHaltReason;
 		var schoolTextID;
 		var schoolDateID;
 
@@ -305,6 +323,9 @@ education.display = function () {
 			formattedLevel = HTMLeducationLevel.replace("%data%", education.schools[school].level);
 			$(schoolTextID).append(formattedLevel);
 
+			formattedHaltReason = HTMLeducationHaltReason.replace("%data%", education.schools[school].haltReason);
+			$(schoolTextID).append(formattedHaltReason);
+
 			formattedDates = HTMLeducationDates.replace("%data%", education.schools[school].dates);
 			$(schoolDateID).append(formattedDates);
 		}
@@ -328,17 +349,14 @@ education.display = function () {
 
 			courseTextID = "#course" + course + "text:last";
 			courseDateID = "#course" + course + "date:last";
-		//	$(courseTextID).append(course);
 
 			formattedCourseSchool = HTMLeducationSchool.replace ("%data%", education.onlineCourses[course].school);
 			$(courseTextID).append(formattedCourseSchool);
 
 			formattedCourse = HTMLeducationSubject.replace ("%data%", education.onlineCourses[course].title);
-//			formattedURL = HTMLeducationURL.replace("%URL%", education.schools[school].schoolURL);
 			$(courseTextID).append(formattedCourse);
 
 			courseDescription = HTMLeducationDescription.replace("%data%", education.onlineCourses[course].description);
-			//formattedCourseDescription = courseDescription.replace("float:left;", "float:left;padding-top:25px;margin-bottom:15px;")
 			$(courseTextID).append(courseDescription);
 
 			formattedDates = HTMLeducationDates.replace("%data%", education.onlineCourses[course].dates);
