@@ -11,7 +11,7 @@ var bio = {
     "name": "Miguel M. Mota",
     "role": "Junior Software Developer",
     "pictureURL": "images/me.png",
-    "aboutMe": "I am an ambitious and dedicated IT professional, soon to graduate (Summer 2016) with the equivalent of a 1st class honours from the University of Porto in Electronic and Computer Engineering. I have relocated to the UK from Portugal and I am now hoping to start my career in the IT industry.  Ultimately I hope to work in software development and I have a broad knowledge of several languages including C, C++, Java, SQL as well as front end tools such as HTML, Javascript and CSS and some examples of my work can be found below, however initially I am looking for any role that will allow me to build my knowledge of software application development in a commercial environment.  I am fluent in English, French and Spanish, and proficient in Mandarin and I have my own transport.",
+    "aboutMe": "I am an ambitious and dedicated IT professional, soon to graduate (Summer 2016) with the equivalent of a 1st class honours from the University of Porto in Electronic and Computer Engineering. I have relocated to the UK from Portugal and I am now hoping to start my career in the IT industry.  Ultimately I hope to work in software development and I have a broad knowledge of several languages including C, C++, Java, SQL, Python as well as front end tools such as HTML, Javascript and CSS. Some examples of my work can be found below, however initially I am looking for any role that will allow me to build my knowledge of software application development in a commercial environment.  I am fluent in English, French and Spanish, and proficient in Mandarin and I have my own transport.",
     "contacts": {
         "address": "7, Wherstead Road, IP2 8JQ, Suffolk, UK",
         "mobile": "(+44) 79136 37670",
@@ -231,10 +231,10 @@ $("#about").append(formattedAboutMe); // funciona?
 var formattedAddress = HTMLaddress.replace ("%data%", agency.agency.address);
 var addressLine = HTMLaddressText + formattedAddress;
 
-var formattedEmailAddress = HTMLaddress.replace ("%data%", agency.agency.emailAddress);
+var formattedEmailAddress = HTMLaddress.replace ("%data%", bio.contacts.emailAddress);
 var emailAddressLine = HTMLemailAddressText + formattedEmailAddress;
 
-var formattedMobile = HTMLmobile.replace ("%data%",agency.agency.mobile);
+var formattedMobile = HTMLmobile.replace ("%data%",bio.contacts.mobile);
 var mobileLine = HTMLmobileText + formattedMobile;
 
 var formattedTelephone = HTMLtelephone.replace ("%data%",agency.agency.telephone);
