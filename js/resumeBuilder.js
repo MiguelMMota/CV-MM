@@ -16,10 +16,6 @@ var bio = {
         "address": "7, Wherstead Road, IP2 8JQ, Suffolk, UK",
         "mobile": "(+44) 79136 37670",
         "emailAddress": "mota.m.miguel@gmail.com",
-        "gitHub": "none",
-        "twitter": "none",
-        "linkedIn": "none",
-        "location": "Ipswich, United Kingdom"
     },
     "interests": [{
     	"description": "Music",
@@ -231,6 +227,7 @@ $("#photo").append(biopic); // funciona?
 var formattedAboutMe = HTMLaboutMe.replace ("%data%", bio.aboutMe);
 $("#about").append(formattedAboutMe); // funciona?
 
+//Agency
 var formattedAddress = HTMLaddress.replace ("%data%", agency.agency.address);
 var addressLine = HTMLaddressText + formattedAddress;
 
@@ -243,10 +240,24 @@ var mobileLine = HTMLmobileText + formattedMobile;
 var formattedTelephone = HTMLtelephone.replace ("%data%",agency.agency.telephone);
 var telephoneLine = HTMLtelephoneText + formattedTelephone;
 
-$("#contacts").append(addressLine);
-$("#contacts").append(emailAddressLine);
-$("#contacts").append(telephoneLine);
-$("#contacts").append(mobileLine);
+$("#contacts-agency").append(addressLine);
+$("#contacts-agency").append(emailAddressLine);
+$("#contacts-agency").append(telephoneLine);
+$("#contacts-agency").append(mobileLine);
+
+//Personal
+var formattedAddress = HTMLaddress.replace ("%data%", bio.contacts.address);
+var addressLine = HTMLaddressText + formattedAddress;
+
+var formattedEmailAddress = HTMLaddress.replace ("%data%", bio.contacts.emailAddress);
+var emailAddressLine = HTMLemailAddressText + formattedEmailAddress;
+
+var formattedMobile = HTMLmobile.replace ("%data%",bio.contacts.mobile);
+var mobileLine = HTMLmobileText + formattedMobile;
+
+$("#contacts-personal").append(addressLine);
+$("#contacts-personal").append(emailAddressLine);
+$("#contacts-personal").append(mobileLine);
 
 //Experience
 work.display = function () {
